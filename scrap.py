@@ -1,7 +1,9 @@
-import requests 
-from bs4 import BeautifulSoup 
 import json
 import csv
+import requests
+
+from bs4 import BeautifulSoup 
+
 
 url = "http://books.toscrape.com"
 
