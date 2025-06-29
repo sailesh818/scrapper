@@ -1,5 +1,7 @@
 import requests 
 from bs4 import BeautifulSoup 
+import json
+import csv
 
 url = "http://books.toscrape.com"
 
@@ -31,12 +33,12 @@ def scrape_books(url):
 
 all_books = scrape_books(url)
 
-import json
+
 
 with open("books.json", "w") as f:
     json.dump(all_books, f, indent= 4, ensure_ascii=False)
     
-import csv
+
 
 with open("books.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.DictWriter(f, fieldnames=["title", "currency", "price"])
